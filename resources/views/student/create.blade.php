@@ -14,7 +14,7 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="px-4 py-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <form action="{{ url('student') }}"  method="POST">
+                <form action="{{ url('students-add') }}"  method="POST">
                     @csrf
                     <div class="container">
                         <div class="mt-4">
@@ -41,7 +41,6 @@
                             </x-primary-button>
                         </div>
                     </div>
-
 
                 </form>
             </div>

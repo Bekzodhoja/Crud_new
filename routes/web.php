@@ -34,6 +34,9 @@ require __DIR__.'/auth.php';
 
  
 Route::controller(StudentController::class)->group(function () {
-Route::get('/student','create');
-Route::post('/student','store');
+Route::get('/students','index');
+Route::get('/students-add','create');
+Route::post('/students-add','store');
+
+
 });
