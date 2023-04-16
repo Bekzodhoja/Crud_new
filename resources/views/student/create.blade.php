@@ -7,6 +7,7 @@
 
     <div class="mt-4 text-center">
         <x-status-success class="mb-4" :status="session('message')" />
+        
 
     </div>
     <div class="py-12">
