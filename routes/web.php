@@ -39,6 +39,7 @@ Route::get('/students-add','create');
 Route::post('/students-add','store');
 Route::get('/edit-student/{student_id}','edit');
 Route::put('/update-students/{student_id}','update');
+Route::delete('/delete-students/{student_id}','destroy');
 
 
 });

@@ -49,4 +49,12 @@ class StudentController extends Controller
         return redirect('/students')->with('message','Updated Successfully');
 
     }
+
+    public function destroy($student_id)
+    {
+        $student=Student::find($student_id);
+        $student->delete();
+        return redirect()->back()->with('message','Successfully deleted');
+
+    }
 }

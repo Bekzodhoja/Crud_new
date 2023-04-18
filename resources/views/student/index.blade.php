@@ -36,10 +36,14 @@
                         <td>
                             <a href="{{ url('/edit-student',$student->id) }}" class="btn btn-primary">Edit</a>
                         </td>
+                        <form action="{{ 'delete-students/'.$student->id }}" method="POST">
+                          @csrf
+                          @method('DELETE')
                         <td>
-                            <a href="/" class="btn btn-danger">Delete</a>
 
+                          <button class="btn btn-danger" onclick="return confirm('Are you sure')">Delete</button>
                         </td>
+                      </form>
                       </tr>
                       @empty
 
