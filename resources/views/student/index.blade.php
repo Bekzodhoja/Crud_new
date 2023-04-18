@@ -5,7 +5,8 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 text-center">
+      <x-status-success class="mb-4" :status="session('message')" />
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="px-4 py-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -33,7 +34,7 @@
                         <td>{{ $student->email }}</td>
                         <td>{{ $student->phone }}</td>
                         <td>
-                            <a href="/" class="btn btn-primary">Edit</a>
+                            <a href="{{ url('/edit-student',$student->id) }}" class="btn btn-primary">Edit</a>
                         </td>
                         <td>
                             <a href="/" class="btn btn-danger">Delete</a>

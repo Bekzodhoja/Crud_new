@@ -30,4 +30,23 @@ class StudentController extends Controller
         $student=Student::create($data);
         return redirect()->back()->with('message','Sudent Create Successfully');
     }
+
+    public function edit( $student_id)
+    {
+        $student=Student::find($student_id);
+        return view('student.edit',compact('student'));
+    }
+    public function update(StoreStudentRequest $request,  $student_id)
+    {
+        $data=$request->validated();
+        $student=Student::where('id',$student_id)->update([
+            'name'=>$data['name'],
+            'email'=>$data['email'],
+            'phone'=>$data['phone']
+        ]);
+       
+        
+        return redirect('/students')->with('message','Updated Successfully');
+
+    }
 }
